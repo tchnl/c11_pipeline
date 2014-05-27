@@ -5,10 +5,10 @@ def main():
     best4 = "WCFS1_glc_2_tss.fa"
     best5 = "NC8_glc_1_tss.fa"
     best6 = "NC8_glc_2_tss.fa"
-    nieuw1 = "genesWCFS1_1.fa"
-    nieuw2 = "genesWCFS1_2.fa"
-    nieuw3 = "genesNC8_1.fa"
-    nieuw4 = "genesNC8_2.fa"
+    nieuw1 = "genes1.fa"
+    nieuw2 = "genes2.fa"
+    nieuw3 = "genes3.fa"
+    nieuw4 = "genes4.fa"
     
     linesData = openBestdata(best1)
     linesGenes = openBestdata(best2)
