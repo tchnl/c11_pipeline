@@ -9,7 +9,7 @@ def main():
 ##        MEME_input = "ftp://thierry@cytosine.nl/home/thierry/c11_pipeline/genes"+str(i)+".fa"
 ##        subprocess.call("cd ftp://thierry@cytosine.nl/sharing/students/MEME/bin ; ./meme <"+str(MEME_input)+"> -dna -oc . -nostatus -time 18000 -maxsize 60000 -mod zoops -nmotifs 3 -minw 6 -maxw 50 -revcomp -o ftp://thierry@cytosine.nl/home/thierry/c11_pipeline/", shell=True)
     
-    MEME_input = "cytosine.nl/home/thierry/c11_pipeline/genes0.fa"
-    subprocess.call("cd cytosine.nl/sharing/students/MEME/bin/ ; ./meme <"+str(MEME_input)+"> -dna -oc . -nostatus -time 18000 -maxsize 60000 -mod zoops -nmotifs 3 -minw 6 -maxw 50 -revcomp -o ftp://thierry@cytosine.nl/home/thierry/c11_pipeline/", shell=True)
+    MEME_input = "/home/thierry/c11_pipeline/genes0.fa"
+    subprocess.call("cd /sharing/students/MEME/bin/ ; ./meme <"+str(MEME_input)+"> -dna -oc . -nostatus -time 18000 -maxsize 60000 -mod zoops -nmotifs 3 -minw 6 -maxw 50 -revcomp -o /home/thierry/c11_pipeline/", shell=True)
 
 main()
