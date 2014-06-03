@@ -12,8 +12,7 @@ def main():
             if float(line_split[2]) < 0.05:
                 sorted_list.append(line)
     
-    nieuwBest = open("/home/thierry/c11_pipeline/testLog2.txt", "w")
-    nieuwBest.write(str(sorted_list))
+
     return sorted_list
 
 main()
