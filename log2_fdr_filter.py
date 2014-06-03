@@ -13,7 +13,7 @@ def main():
                 sorted_list.append(line)
     
     nieuwBest = open("testLog2.txt", "w")
-    nieuwBest.write(str(sorted_list)
+    nieuwBest.write(str(sorted_list))
     return sorted_list
 
 main()
