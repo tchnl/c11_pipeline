@@ -11,7 +11,9 @@ def main():
         if float(line_split[1]) > -1 and float(line_split[1]) < 1:
             if float(line_split[2]) < 0.05:
                 sorted_list.append(line)
-
+    
+    nieuwBest = open("testLog2.txt", "w")
+    nieuwBest.write(str(sorted_list)
     return sorted_list
 
 main()
