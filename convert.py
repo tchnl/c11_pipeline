@@ -1,5 +1,5 @@
-data = open("/home/users/dhfot/Desktop/week 4/Zip bestand/LP_genes.txt", "r").readlines()
-data_new = open("/home/users/dhfot/Desktop/week 4/Zip bestand/LP_genes_NEW.txt", "w")
+data = open("/home/thierry/c11_pipeline/LP_genes.txt", "r").readlines()
+data_new = open("/home/thierry/c11_pipeline/LP_genes_NEW.txt", "w")
 
 new_set = []
 for line in data[2:]:
