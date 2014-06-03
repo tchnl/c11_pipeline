@@ -20,7 +20,7 @@ def main(lijstRatios):
     genesWCFS1_2 = openNieuwBest(nieuw2)
     genesNC8_1 = openNieuwBest(nieuw3)
     genesNC8_2 = openNieuwBest(nieuw4)
-    getGenes(linesData, linesGenes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2, lijstRatios)
+    getGenes(linesGenes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2, lijstRatios)
 
     
 def openBestdata(best):
@@ -32,7 +32,7 @@ def openNieuwBest(nieuw):
     best = open(nieuw, 'w')
     return best
 
-def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2, lijstRatios):
+def getGenes(genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2, lijstRatios):
     lijstLP = []
     lijstNC = []
     lijstGenes = []
@@ -41,7 +41,7 @@ def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, se
     genesWCFS1 = []
     genesNC8 = []
     
-    for line in lijstRatios::
+    for line in lijstRatios:
         line2 = line.split("\t")
         lijstLP.append(line2[0])
     
@@ -56,22 +56,34 @@ def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, se
         item2 = item.split('|')
         lijstNC.append(item2[1])
 
-
-    fasta1 = fastaMaker(lijstLP, seqWCFS1_1, genesWCFS1, genesWCFS1_1)
-    fasta2 = fastaMaker(lijstLP, seqWCFS1_2, genesWCFS1, genesWCFS1_2)
-    fasta3 = fastaMaker(lijstNC, seqNC8_1, genesNC8, genesNC8_1)
-    fasta4 = fastaMaker(lijstNC, seqNC8_2, genesNC8, genesNC8_2)
-   
-
-def fastaMaker(lijstCode, seqGenen, genen, nieuw):
-    for nc in lijstCode:
-        for seq in seqGenen:
+  
+    for lp in lijstLP:
+        for seq in seqWCFS1_1:
+            if lp in seq:
+                item = seqWCFS1_1.index(seq)+1
+                for m in genesWCFS1:
+                    if lp in m:
+                        genesWCFS1_1.write(m +'\n' + seqWCFS1_1[item])
+        for seq in seqWCFS1_2:
+            if lp in seq:
+                item = seqWCFS1_2.index(seq)+1
+                for m in genesWCFS1:
+                    if lp in m:
+                        genesWCFS1_2.write(m +'\n' + seqWCFS1_2[item])
+    for nc in lijstNC:
+        for seq in seqNC8_1:
             if nc in seq:
-                item = seqGenen.index(seq)+1
-                for m in genes:
+                item = seqNC8_1.index(seq)+1
+                for m in genesNC8:
 
                     if nc in m:
-                        nieuw.write(m + seqNC8_1[item])
+                        genesNC8_1.write(m + seqNC8_1[item])
+        for seq in seqNC8_2:
+            if nc in seq:
+                item = seqNC8_2.index(seq)+1
+                for m in genesNC8:
+                    if nc in m:
+                        genesNC8_2.write(m + seqNC8_2[item])
     
  
     genesWCFS1_1.close()
