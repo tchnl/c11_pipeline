@@ -24,8 +24,8 @@ def main():
     print lijstSorted
 
     
-def openBestdata(best):
-    best = open(best, 'r')
+def openBestdata(bestand):
+    best = open(bestand, 'r')
     lines = best.readlines()
     return lines   
         
