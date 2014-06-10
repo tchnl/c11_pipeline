@@ -1,6 +1,6 @@
 def main(lijstRatios):
     #best1 = "data.txt"
-    best2 = "LP_genes_ED.txt"
+    best2 = "LP_genes_NEW.txt"
     best3 = "WCFS1_glc_1_tss.fa"
     best4 = "WCFS1_glc_2_tss.fa"
     best5 = "NC8_glc_1_tss.fa"
