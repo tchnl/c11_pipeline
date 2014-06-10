@@ -5,6 +5,8 @@
 def main():
     input_data = open("/home/thierry/c11_pipeline/LP_DEG_glc.txt", "r").readlines()
     sorted_list = []
+    output_data = open("/home/thierry/c11_pipeline/LP_DEG_glc_filtered.txt", "w")
+    output_data.write(input_data[1])
 
     for line in input_data[2:]:
         line_split = line.strip().split()
@@ -13,6 +15,7 @@ def main():
                 sorted_list.append(line)
     
 
-    return sorted_list
+    for line in sorted_list:
+        output_data.write(line+"\n")
 
 main()
