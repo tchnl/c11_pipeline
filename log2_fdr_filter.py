@@ -16,6 +16,6 @@ def main():
     
 
     for line in sorted_list:
-        output_data.write(line)
+        output_data.write(line.rstrip("/n"))
 
 main()
