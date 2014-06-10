@@ -1,10 +1,10 @@
-def main():
-    best1 =  input("Bestandsnaam gefilterde ratios: ")             # "data.txt"
-    best2 =  input("Bestandsnaam orthologen: ")                    # "LP_genes_NEW.txt"
-    best3 =  input("Bestandsnaam sequenties stam 1 replicate 1: ") # "WCFS1_glc_1_tss.fa"
-    best4 =  input("Bestandsnaam sequenties stam 1 replicate 2: ") # "WCFS1_glc_2_tss.fa"
-    best5 =  input("Bestandsnaam sequenties stam 2 replicate 1: ") # "NC8_glc_1_tss.fa"
-    best6 =  input("Bestandsnaam sequenties stam 2 replicate 2: ") # "NC8_glc_2_tss.fa"
+def main(best1, best2, best3, best4, best4, best5, best6):
+##    best1 "data.txt"
+##    best2 "LP_genes_NEW.txt"
+##    best3 "WCFS1_glc_1_tss.fa"
+##    best4 "WCFS1_glc_2_tss.fa"
+##    best5 "NC8_glc_1_tss.fa"
+##    best6 "NC8_glc_2_tss.fa"
     nieuw1 = "genes1.fa" 
     nieuw2 = "genes2.fa"
     nieuw3 = "genes3.fa"
