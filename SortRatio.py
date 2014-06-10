@@ -1,9 +1,9 @@
 
 
 def main():
-    bestand = "LP_DEG_glc_1.txt"
+    bestand = "LP_DEG_glc_filtered.txt"
     best = openBestdata(bestand)
-    bestNieuw = open("LP_DEG_glc_1.txt", "w")
+    bestNieuw = open("LP_DEG_glc_filtered.txt", "w")
     
     
     lijstNieuw = []
