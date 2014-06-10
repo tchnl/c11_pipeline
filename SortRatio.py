@@ -1,10 +1,13 @@
 
 
-def main(lijst):
-
+def main():
+    bestand = open("LP_DEG_glc.txt", "r")
+    best = openBestdata(bestand)
+    
+    
     lijstNieuw = []
     lijstNieuw2 = []
-    for line in lijst:
+    for line in best:
         if line.startswith("lp"):
             line2 = line.split("\t")
             #print(line2)
@@ -18,10 +21,13 @@ def main(lijst):
     
         
     
-    return lijstSorted 
+    print lijstSorted
 
     
-    
+def openBestdata(best):
+    best = open(best, 'r')
+    lines = best.readlines()
+    return lines   
         
         
     
