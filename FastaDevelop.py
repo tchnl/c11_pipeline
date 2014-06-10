@@ -42,9 +42,8 @@ def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, se
     genesNC8 = []
 
     for i in data:
-        lijstLP.append(i[1:8])
-        
-    lijstLP.remove('ID"\t"WC') 
+        if i.startswith("lp")
+            lijstLP.append(i[0:7])
    
     
     for lp in lijstLP:
