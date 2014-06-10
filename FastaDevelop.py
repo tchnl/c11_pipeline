@@ -1,16 +1,16 @@
-def main(lijstRatios):
-    #best1 = "data.txt"
-    best2 = "LP_genes_NEW.txt"
-    best3 = "WCFS1_glc_1_tss.fa"
-    best4 = "WCFS1_glc_2_tss.fa"
-    best5 = "NC8_glc_1_tss.fa"
-    best6 = "NC8_glc_2_tss.fa"
-    nieuw1 = "genes1.fa"
+def main():
+    best1 =  input("Bestandsnaam gefilterde ratios: ")             # "data.txt"
+    best2 =  input("Bestandsnaam genen: ")                         # "LP_genes_NEW.txt"
+    best3 =  input("Bestandsnaam sequenties stam 1 replicate 1: ") # "WCFS1_glc_1_tss.fa"
+    best4 =  input("Bestandsnaam sequenties stam 1 replicate 2: ") # "WCFS1_glc_2_tss.fa"
+    best5 =  input("Bestandsnaam sequenties stam 2 replicate 1: ") # "NC8_glc_1_tss.fa"
+    best6 =  input("Bestandsnaam sequenties stam 2 replicate 2: ") # "NC8_glc_2_tss.fa"
+    nieuw1 = "genes1.fa" 
     nieuw2 = "genes2.fa"
     nieuw3 = "genes3.fa"
     nieuw4 = "genes4.fa"
     
-    #linesData = openBestdata(best1)
+    linesData = openBestdata(best1)
     linesGenes = openBestdata(best2)
     seqWCFS1_1 = openBestdata(best3)
     seqWCFS1_2 = openBestdata(best4)
@@ -20,7 +20,7 @@ def main(lijstRatios):
     genesWCFS1_2 = openNieuwBest(nieuw2)
     genesNC8_1 = openNieuwBest(nieuw3)
     genesNC8_2 = openNieuwBest(nieuw4)
-    getGenes(linesGenes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2, lijstRatios)
+    getGenes(linesData, linesGenes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2)
 
     
 def openBestdata(best):
@@ -32,7 +32,7 @@ def openNieuwBest(nieuw):
     best = open(nieuw, 'w')
     return best
 
-def getGenes(genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2, lijstRatios):
+def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2):
     lijstLP = []
     lijstNC = []
     lijstGenes = []
@@ -40,10 +40,12 @@ def getGenes(genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1
     p = 0;
     genesWCFS1 = []
     genesNC8 = []
-    
-    for line in lijstRatios:
-        line2 = line.split("\t")
-        lijstLP.append(line2[0])
+
+    for i in data:
+        lijstLP.append(i[1:8])
+        
+    lijstLP.remove('ID"\t"WC') 
+   
     
     for lp in lijstLP:
         for gene in genes:
