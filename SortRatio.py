@@ -1,12 +1,12 @@
 
 
 def main():
-    bestand = open("LP_DEG_glc.txt", "r")
+    bestand = "LP_DEG_glc.txt"
     best = openBestdata(bestand)
     
     
     lijstNieuw = []
-    lijstNieuw2 = []
+    lijstSorted = []
     for line in best:
         if line.startswith("lp"):
             line2 = line.split("\t")
@@ -16,7 +16,6 @@ def main():
     lijst2 = sorted(lijstNieuw, key=lambda line2: line2[1])
     for item in lijst2:
         item = "\t".join(item)
-        print (item)
         lijstSorted.append(item)
     
         
