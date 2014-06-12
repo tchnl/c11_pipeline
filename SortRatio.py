@@ -1,7 +1,4 @@
-
-
-def main():
-    bestand = "LP_DEG_glc_filtered.txt"
+def main(bestand):
     best = openBestdata(bestand)
     bestNieuw = open("LP_DEG_glc_filtered.txt", "w")
     
@@ -25,6 +22,7 @@ def main():
         
     
     bestNieuw.close()
+    return True
     
 def openBestdata(bestand):
     best = open(bestand, 'r')
@@ -37,6 +35,3 @@ def openBestdata(bestand):
         
     
 
-
-
-main()

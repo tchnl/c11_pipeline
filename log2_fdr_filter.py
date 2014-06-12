@@ -2,10 +2,10 @@
 # Filter log2/fdr module                      #
 ###############################################
 
-def main():
-    input_data = open("/home/thierry/c11_pipeline/LP_DEG_glc.txt", "r").readlines()
+def main(file):
+    input_data = open(file, "r").readlines()
     sorted_list = []
-    output_data = open("/home/thierry/c11_pipeline/LP_DEG_glc_filtered.txt", "w")
+    output_data = open("LP_DEG_glc_filtered.txt", "w")
     output_data.write(input_data[1])
 
     for line in input_data[2:]:
@@ -17,5 +17,7 @@ def main():
 
     for line in sorted_list:
         output_data.write(line)
+	
+    return (True)
 
-main()
+
