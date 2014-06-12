@@ -5,10 +5,10 @@ def main(best1, best2, best3, best4, best4, best5, best6):
 ##    best4 = "WCFS1_glc_2_tss.fa"
 ##    best5 = "NC8_glc_1_tss.fa"
 ##    best6 = "NC8_glc_2_tss.fa"
-    nieuw1 = "genes1.fa" 
-    nieuw2 = "genes2.fa"
-    nieuw3 = "genes3.fa"
-    nieuw4 = "genes4.fa"
+    nieuw1 = "genes1_1.fa" 
+    nieuw2 = "genes2_1.fa"
+    nieuw3 = "genes3_1.fa"
+    nieuw4 = "genes4_1.fa"
     
     linesData = openBestdata(best1)
     linesGenes = openBestdata(best2)
@@ -38,7 +38,7 @@ def openNieuwBest(nieuw):
         best = open(nieuw, 'w')
         return best
     except IOError:
-        print ("cannot open", nieuw)
+        print ("cannot open a new file: ", nieuw)
     except:
         print ("Unexpected error")
 
@@ -60,7 +60,7 @@ def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, se
         for gene in genes:
             if lp in gene:
                 gene2 = gene.split('\t')
-                genesWCFS1.append('>' + gene2[0] +'\n')
+                genesWCFS1.append('>' + gene2[0])
                 genesNC8.append('>' + gene2[1])
 
     for item in genesNC8:
