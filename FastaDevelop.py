@@ -38,7 +38,7 @@ def openNieuwBest(nieuw):
         best = open(nieuw, 'w')
         return best
     except IOError:
-        print ("cannot open", nieuw)
+        print ("cannot open a new file: ", nieuw)
     except:
         print ("Unexpected error")
 
@@ -60,7 +60,7 @@ def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, se
         for gene in genes:
             if lp in gene:
                 gene2 = gene.split('\t')
-                genesWCFS1.append('>' + gene2[0] +'\n')
+                genesWCFS1.append('>' + gene2[0])
                 genesNC8.append('>' + gene2[1])
 
     for item in genesNC8:
