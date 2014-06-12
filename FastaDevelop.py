@@ -1,4 +1,4 @@
-def main(best1, best2, best3, best4, best4, best5, best6): 
+def main(best1, best2, best3, best4, best5, best6): 
 ##    best1 = "LP_DEG_glc_filtered.txt"
 ##    best2 = "LP_genes_NEW.txt"
 ##    best3 = "WCFS1_glc_1_tss.fa"
@@ -21,7 +21,7 @@ def main(best1, best2, best3, best4, best4, best5, best6):
     genesNC8_1 = openNieuwBest(nieuw3)
     genesNC8_2 = openNieuwBest(nieuw4)
     getGenes(linesData, linesGenes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2)
-
+    return True
     
 def openBestdata(best):
     try: 
@@ -105,4 +105,4 @@ def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, se
      
     
 
-main()
+
