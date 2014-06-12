@@ -1,14 +1,14 @@
-def main(best1, best2, best3, best4, best4, best5, best6):
-##    best1 "data.txt"
-##    best2 "LP_genes_NEW.txt"
-##    best3 "WCFS1_glc_1_tss.fa"
-##    best4 "WCFS1_glc_2_tss.fa"
-##    best5 "NC8_glc_1_tss.fa"
-##    best6 "NC8_glc_2_tss.fa"
-    nieuw1 = "genes1.fa" 
-    nieuw2 = "genes2.fa"
-    nieuw3 = "genes3.fa"
-    nieuw4 = "genes4.fa"
+def main(): # best1, best2, best3, best4, best4, best5, best6
+    best1 = "LP_DEG_glc_filtered.txt"
+    best2 = "LP_genes_NEW.txt"
+    best3 = "WCFS1_glc_1_tss.fa"
+    best4 = "WCFS1_glc_2_tss.fa"
+    best5 = "NC8_glc_1_tss.fa"
+    best6 = "NC8_glc_2_tss.fa"
+    nieuw1 = "genes1_1.fa" 
+    nieuw2 = "genes2_1.fa"
+    nieuw3 = "genes3_1.fa"
+    nieuw4 = "genes4_1.fa"
     
     linesData = openBestdata(best1)
     linesGenes = openBestdata(best2)
@@ -24,13 +24,23 @@ def main(best1, best2, best3, best4, best4, best5, best6):
 
     
 def openBestdata(best):
-    best = open(best, 'r')
-    lines = best.readlines()
-    return lines
+    try: 
+        bestand = open(best, 'r')
+        lines = bestand.readlines()
+        return lines
+    except IOError:
+        print ("cannot open", best)
+    except:
+        print ("Unexpected error")
 
 def openNieuwBest(nieuw):
-    best = open(nieuw, 'w')
-    return best
+    try:
+        best = open(nieuw, 'w')
+        return best
+    except IOError:
+        print ("cannot open", nieuw)
+    except:
+        print ("Unexpected error")
 
 def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, seqWCFS1_1, seqWCFS1_2, seqNC8_1, seqNC8_2):
     lijstLP = []
@@ -40,7 +50,7 @@ def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, se
     p = 0;
     genesWCFS1 = []
     genesNC8 = []
-
+ 
     for i in data:
         if i.startswith("lp")
             lijstLP.append(i[0:7])
