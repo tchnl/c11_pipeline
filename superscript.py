@@ -28,11 +28,11 @@ def main():
         #meme(defaultMEMEFile)
         
         
-	
-	
+  
+  
 def filter (defaultFilterFile):
-	x = log2_fdr_filter.main(defaultFilterFile)
-	print(x)
+  x = log2_fdr_filter.main(defaultFilterFile)
+  print(x)
 def sort (defaultSortFile):
         x = SortRatio.main(defaultSortFile)
         print (x)
@@ -43,7 +43,7 @@ def fasta(file1,file2,file3,file4,file5,file6):
         x = FastaDevelop.main(file1,file2,file3,file4,file5,file6)
         print (x)
 def meme(defaultMEMEFile):
-	for i in range(4):
+  for i in range(4):
                 file =  str(defaultMEMEFile+str(i)+".fa")
                 index = i
                 x = MEME.main(file,idex)
