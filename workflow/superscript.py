@@ -5,8 +5,10 @@
 import sys
 sys.path.insert(0, "/home/thierry/c11_pipeline")
 import log2_fdr_filter
-#import SortRatio
-#import convert
+import SortRatio
+import convert
+import FastaDevelop
+import MEME
 
 
 
