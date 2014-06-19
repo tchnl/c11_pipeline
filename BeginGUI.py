@@ -1,4 +1,5 @@
-import tkinter
+import Tkinter as tkinter
+
 
 class MyGUI:
 
