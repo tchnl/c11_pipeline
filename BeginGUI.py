@@ -4,6 +4,7 @@ class MyGUI:
 
     def __init__(self):
         self.main_window = tkinter.Tk()
+        self.main_window.title("Motif finder v1.0")
         
         self.top_frame = tkinter.Frame(self.main_window)
 
@@ -321,37 +322,39 @@ def main():
         my_gui2 = MyGUI2()
         lijst2 = my_gui2.get_file()
         lijst2.append(1)
+        return lijst2
     elif my_gui.get_value() == 2:
         my_gui2 = MyGUI2()
         lijst2 = my_gui2.get_file()
         lijst2.append(2)
+        return lijst2
     elif my_gui.get_value() == 3:
         my_gui3 = MyGUI3()
         if my_gui3.get_module() == 4:
             my_gui4 = MyGUI4()
             lijst2 = my_gui4.get_file()
             lijst2.append(4)
-            print(lijst2)
+            return lijst2
         elif my_gui3.get_module() == 5:
             my_gui5 = MyGUI5()
             lijst2 = my_gui5.get_file()
             lijst2.append(5)
-            print(lijst2)
+            return lijst2
         elif my_gui3.get_module() == 6:
             my_gui6 = MyGUI6()
             lijst2 = my_gui6.get_file()
             lijst2.append(6)
-            print(lijst2)
+            return lijst2
         elif my_gui3.get_module() == 7:
             my_gui7 = MyGUI7()
             lijst2 = my_gui7.get_file()
             lijst2.append(7)
-            print(lijst2)
+            return lijst2
         elif my_gui3.get_module() == 8:
             my_gui8 = MyGUI8()
             lijst2 = my_gui8.get_file()
             lijst2.append(8)
-            print(lijst2)
+            return lijst2
 
 main()
 
