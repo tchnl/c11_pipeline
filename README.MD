@@ -3,25 +3,6 @@ Motif finder
 
 The Motif finder is a python-based tool, made by Marieke Beltman, Tom Linssen and Thierry Haddad. It's goal is to find various MEME motifs based on input given.
 
-Main Window
-----
-In the Main Window, one of the next items can be chosen:
-- All modules without Sort
-- All modules include Sort
-- Select individual modules
-
-When you choose All modules without Sort or All modules include Sort, you can enter the file names (e.g. "Ratios.txt") in the indicated boxes in the next GUI.
-
-When you choose Select individual modules, you can choose one of the following modules: 
-- Filter ratio's
-- Sort ratio's
-- NC/NZ convert
-- FASTA files maker
-- MEME 
-
-Next, you can enter the required filenames (e.g. "Ratios.txt") in the indicated boxes in the next GUI.
-
-
 Version
 ----
 
@@ -38,6 +19,24 @@ git clone git@github.com:tchnl/c11_pipeline.git
 ```
 ####Manual repository download
 The Workflow folder can also be manually downloaded from the c11_pipeline at https://github.com/tchnl/c11_pipeline.
+
+Main Window
+----
+In the Main Window, one of the next items can be chosen:
+- All modules without Sort
+- All modules include Sort
+- Select individual modules
+
+When you choose All modules without Sort or All modules include Sort, you can enter the file names (e.g. "Ratios.txt") in the indicated boxes in the next GUI.
+
+When you choose Select individual modules, you can choose one of the following modules: 
+- Filter ratio's
+- Sort ratio's
+- NC/NZ convert
+- FASTA files maker
+- MEME 
+
+Next, you can enter the required file names (e.g. "Ratios.txt") in the indicated boxes in the next GUI.
 
 Python Scripts
 -----------
@@ -81,7 +80,7 @@ The inputfile should contain the following items:
     lp_2325	-0.4088324993	        0.0171639533
 
 ####Convert.py
-This script's function is to separate orthologues in LP_genes_NEW.txt if there are more than 2 orthologues in a single row. It reads a tab-delimited file.
+This script's function is to separate orthologues in LP_genes.txt if there are more than 2 orthologues in a single row. It reads a tab-delimited file.
 
 Example of the input:
 
@@ -115,8 +114,8 @@ The files which will be used by this module are:
 
 - The file with orthologues (output from convert.py):
  - The file has to be a tab delimited text file
- - There should be only two orthologues per single line, first the ortologue with the LP_number and second the orthologue with the nc8_number.
- - The names of the ortologues have to look like this (NC or NZ number|lp_number or nc8_number|positions|length of sequence):
+ - There should be only two orthologues per single line, first the orthologue with the LP_number and second the orthologue with the nc8_number.
+ - The names of the orthologues have to look like this (NC or NZ number|lp_number or nc8_number|positions|length of sequence):
 
 
     NC_004567|lp_1688|1536646_1537197|184AA NZ_AGRI01000006|nc8_1446|106184_106735|184AA
