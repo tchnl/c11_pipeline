@@ -93,7 +93,7 @@ Example of the input:
 If you want to replace LP_genes_NEW.txt with a similar file:
 - The first 2 lines of LP_genes_NEW.txt are headers and are ignored by the script
 - Replace "NC" and "NZ" in the script for the two orthologue-prefixes in your own file
-- Either rename your file to LP_genes_NEW.txt or replace the filename in the Python script
+- Either rename your file to LP_genes_NEW.txt or replace the file name in the Python script
 - Both the script and the orthologues file need to be placed in the /Workflow folder	
 	
 ####FastaDevelop.py
@@ -139,7 +139,7 @@ The files which will be used by this module are:
 ####MEME.py
 Our MEME has only been tested on Linux based computers and should be installed on /sharing/students/meme/. Make sure the MEME executable file is placed in /sharing/students/meme/bin/.
 
-The MEME script is build to accept a FASTA file for input. These are named "genes0.fa", "genes1.fa" etc. They superscript autoamically names these FASTA files. The superscript runs the MEME script once for every FASTA file transmitted by the superscript.
+The MEME script is build to accept a FASTA file for input. These are named "genes0.fa", "genes1.fa" etc. They superscript automatically names these FASTA files. The superscript runs the MEME script once for every FASTA file transmitted by the superscript.
 
 The script changes location to the MEME bin directory (/sharing/students/meme/bin/) to call MEME. The parameters can be changed in the script. For parameter options, type 
 
