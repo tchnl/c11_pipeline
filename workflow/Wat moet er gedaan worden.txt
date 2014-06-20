@@ -1,6 +1,0 @@
-Thierry:	exception handling + readme
-Marieke:	exception handling + readme
-Tom:		upload (enter goed maken)
-			superscript alles aan elkaar verbinden
-			website connecteren aan script
-			readme
