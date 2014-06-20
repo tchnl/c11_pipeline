@@ -137,11 +137,9 @@ The files which will be used by this module are:
     TTTTTGTAACAGTCGGCCGCTTCAACCCTTGCAACAAACTGATTTAGATGCTATACTTTAAATTCGTGAGTATCTAGCA    TTAGCTAGATTACTTTCCTTG
 
 ####MEME.py
-The MEME script is build to accept 4 FASTA files for input. These should be named:
-- genes0.fa
-- genes1.fa
-- genes2.fa
-- genes3.fa
+Our MEME has only been tested on Linux based computers and should be installed on /sharing/students/meme/. Make sure the MEME executable file is placed in /sharing/students/meme/bin/.
+
+The MEME script is build to accept a FASTA file for input. These are named "genes0.fa", "genes1.fa" etc. They superscript autoamically names these FASTA files. The superscript runs the MEME script once for every FASTA file transmitted by the superscript.
 
 The script changes location to the MEME bin directory (/sharing/students/meme/bin/) to call MEME. The parameters can be changed in the script. For parameter options, type 
 
