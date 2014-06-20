@@ -53,8 +53,8 @@ def getGenes(data, genes, genesWCFS1_1, genesWCFS1_2, genesNC8_1, genesNC8_2, se
  
     for i in data:
         if i.startswith("lp"):
-            z = i.split("   ")
-            z2 = i[0]
+            z = i.split("\t")
+            z2 = z[0]
             lijstLP.append(z2)
    
     

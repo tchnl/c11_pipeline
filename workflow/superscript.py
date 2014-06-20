@@ -44,11 +44,13 @@ def getDataGUI(input):
                 defaultFastaFile2 = input[3]
                 defaultFastaFile3 = input[4]
                 defaultFastaFile4 = input[5]
-
+        
                 
-                filter(defaultFilterFile)
+                filter2(defaultFilterFile)
+                defaultFilterFile2 = "LP_DEG_glc_filtered.txt"
+                
                 converting(defaultConvertFile)
-                fasta(defaultFilterFile,defaultConvertFile,defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4)
+                fasta(defaultFilterFile2,defaultConvertFile,defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4)
                 meme()                
                 print ("All files are created, without the sort algorithm")
                 
@@ -60,10 +62,11 @@ def getDataGUI(input):
                 defaultFastaFile3 = input[4]
                 defaultFastaFile4 = input[5]
                 
-                filter(defaultFilterFile)
+                filter2(defaultFilterFile)
                 sort(defaultSortFile)
+                defaultFilterFile2 = "LP_DEG_glc_filtered.txt"
                 converting(defaultConvertFile)
-                fasta(defaultFilterFile,defaultConvertFile,defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4)
+                fasta(defaultFilterFile2,defaultConvertFile,defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4)
                 meme() 
                 print("All files are created, with the sort algorithm")
                 
@@ -106,7 +109,7 @@ def getDataGUI(input):
 #Uitvoeren van de gevraagde modules
 #####################################################################
                 
-def filter (defaultFilterFile):
+def filter2 (defaultFilterFile):
         x = log2_fdr_filter.main(defaultFilterFile)
   
 def sort (defaultSortFile):
@@ -121,9 +124,11 @@ def fasta(file1,file2,file3,file4,file5,file6):
 
 #MEME waarbij 4 keer meme wordt aangeroepen
 def meme():
-  for i in range(4):
-                z = str(i)
-                file = str("genes"+z+".fa")
+        z = 0
+        for i in range(4):
+                
+                z +=1
+                file = str("genes"+str(z)+".fa")
                 index = i
                 x = MEME.main(file,i)
 #MEME gebruik voor 1 file
