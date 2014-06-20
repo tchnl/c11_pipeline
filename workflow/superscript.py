@@ -21,19 +21,19 @@ import MEME
 
 def main():
 		#getDataGUI()
-        defaultFilterFile = str ("/c11_pipeline/workflow/LP_DEG_glc.txt")
+        defaultFilterFile = str ("LP_DEG_glc.txt")
         filter(defaultFilterFile)
         defaultSortFile = "LP_DEG_glc_filtered.txt"
-        #sort(defaultSortFile)
+        sort(defaultSortFile)
         defaultConvertFile = "LP_genes.txt"
-        #converting(defaultConvertFile)
+        converting(defaultConvertFile)
         defaultFastaFile1 = "LP_DEG_glc_filtered.txt"
         defaultFastaFile2 = "LP_genes_NEW.txt"
         defaultFastaFile3 = "WCFS1_glc_1_tss.fa"
         defaultFastaFile4 = "WCFS1_glc_2_tss.fa"
         defaultFastaFile5 = "NC8_glc_1_tss.fa"
         defaultFastaFile6 = "NC8_glc_2_tss.fa"
-        #fasta(defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4,defaultFastaFile5,defaultFastaFile6)
+        fasta(defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4,defaultFastaFile5,defaultFastaFile6)
         defaultMEMEFile = "genes"
         #meme(defaultMEMEFile)
 
