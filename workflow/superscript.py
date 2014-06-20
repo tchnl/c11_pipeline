@@ -2,6 +2,8 @@
 # Date:     12-6-2014
 # Function: Controle the workflow
 # Bugs:     unknown
+#EEN HOOP MET ER GECOMMEND WORDEN!!!
+
 
 #import BeginGUI
 import log2_fdr_filter
@@ -21,32 +23,64 @@ import MEME
 
 def main():
         #input = BeginGUI.main()
-        input = ["string1","string2","string3","string3","string3","string3","7"]
+        input = ["string1","string2","string3","string3","string3","string3","string3","string3","string3","2"]
         getDataGUI(input)
-
-
-        defaultFilterFile = str ("LP_DEG_glc.txt")
-        #filter(defaultFilterFile)
-        defaultSortFile = "LP_DEG_glc_filtered.txt"
-        #sort(defaultSortFile)
-        defaultConvertFile = "LP_genes.txt"
-        #converting(defaultConvertFile)
-        defaultFastaFile1 = "LP_DEG_glc_filtered.txt"
-        defaultFastaFile2 = "LP_genes_NEW.txt"
-        defaultFastaFile3 = "WCFS1_glc_1_tss.fa"
-        defaultFastaFile4 = "WCFS1_glc_2_tss.fa"
-        defaultFastaFile5 = "NC8_glc_1_tss.fa"
-        defaultFastaFile6 = "NC8_glc_2_tss.fa"
-        #fasta(defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4,defaultFastaFile5,defaultFastaFile6)
-        defaultMEMEFile = "genes"
-        #meme(defaultMEMEFile)
-
 
 def getDataGUI(input):
         index = int(input[-1])
         if index == 1:
+                defaultFilterFile = input[0]
+                defaultConvertFile = input[1]
+                defaultFastaFile1 = input[2]
+                defaultFastaFile2 = input[3]
+                defaultFastaFile3 = input[4]
+                defaultFastaFile4 = input[5]
+                defaultFastaFile5 = input[6]
+                defaultFastaFile6 = input[7]
+                defaultMEMEFile = input[8]
+                
+                defaultFilterFile = str ("LP_DEG_glc.txt")
+                filter(defaultFilterFile)
+                defaultConvertFile = "LP_genes.txt"
+                converting(defaultConvertFile)
+                defaultFastaFile1 = "LP_DEG_glc_filtered.txt"
+                defaultFastaFile2 = "LP_genes_NEW.txt"
+                defaultFastaFile3 = "WCFS1_glc_1_tss.fa"
+                defaultFastaFile4 = "WCFS1_glc_2_tss.fa"
+                defaultFastaFile5 = "NC8_glc_1_tss.fa"
+                defaultFastaFile6 = "NC8_glc_2_tss.fa"
+                fasta(defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4,defaultFastaFile5,defaultFastaFile6)
+                #defaultMEMEFile = "genes"
+                #meme(defaultMEMEFile)                
                 print ("All files are created, without the sort algorithm")
         if index == 2:
+                defaultFilterFile = input[0]
+                defaultSortFile = input[1]
+                defaultConvertFile = input[2]
+                defaultFastaFile1 = input[3]
+                defaultFastaFile2 = input[4]
+                defaultFastaFile3 = input[5]
+                defaultFastaFile4 = input[6]
+                defaultFastaFile5 = input[7]
+                defaultFastaFile6 = input[8]
+                defaultMEMEFile = input[9]
+                
+                defaultFilterFile = str ("LP_DEG_glc.txt")
+                filter(defaultFilterFile)
+                defaultSortFile = "LP_DEG_glc_filtered.txt"
+                sort(defaultSortFile)
+                defaultConvertFile = "LP_genes.txt"
+                converting(defaultConvertFile)
+                defaultFastaFile1 = "LP_DEG_glc_filtered.txt"
+                defaultFastaFile2 = "LP_genes_NEW.txt"
+                defaultFastaFile3 = "WCFS1_glc_1_tss.fa"
+                defaultFastaFile4 = "WCFS1_glc_2_tss.fa"
+                defaultFastaFile5 = "NC8_glc_1_tss.fa"
+                defaultFastaFile6 = "NC8_glc_2_tss.fa"
+                fasta(defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4,defaultFastaFile5,defaultFastaFile6)
+                #defaultMEMEFile = "genes"
+                #meme(defaultMEMEFile) 
+                
                 print("All files are created, with the sort algorithm")
         if index == 4:
                 file = input[0]
