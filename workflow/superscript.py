@@ -2,18 +2,26 @@
 # Date:     12-6-2014
 # Function: Controle the workflow
 # Bugs:     unknown
-import sys
-sys.path.insert(0, "/home/thierry/c11_pipeline")
+
+#import BeginGUI
 import log2_fdr_filter
 import SortRatio
 import convert
 import FastaDevelop
 import MEME
 
-
+#1: alle zonder sort
+#2: met sort alles 
+#4:	filter
+#5: sort ration
+#6:convert
+#7: fasta 
+#8: meme
+#list einde list
 
 def main():
-        defaultFilterFile = str ("/home/thierry/c11_pipeline/LP_DEG_glc.txt")
+		#getDataGUI()
+        defaultFilterFile = str ("/c11_pipeline/workflow/LP_DEG_glc.txt")
         filter(defaultFilterFile)
         defaultSortFile = "LP_DEG_glc_filtered.txt"
         #sort(defaultSortFile)
@@ -28,10 +36,12 @@ def main():
         #fasta(defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4,defaultFastaFile5,defaultFastaFile6)
         defaultMEMEFile = "genes"
         #meme(defaultMEMEFile)
-        
-        
-  
-  
+
+
+def getDataGUI():
+	x = beginGUI.main()
+	
+		
 def filter (defaultFilterFile):
   x = log2_fdr_filter.main(defaultFilterFile)
   print(x)

@@ -5,7 +5,7 @@
 def main(file):
     input_data = open(file, "r").readlines()
     sorted_list = []
-    output_data = open("/home/thierry/c11_pipeline/LP_DEG_glc_filtered.txt", "w")
+    output_data = open("/c11_pipeline/workflow/LP_DEG_glc_filtered.txt", "w")
     output_data.write(input_data[1])
 
     for line in input_data[2:]:
