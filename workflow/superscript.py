@@ -44,84 +44,44 @@ def getDataGUI(input):
                 defaultFastaFile2 = input[3]
                 defaultFastaFile3 = input[4]
                 defaultFastaFile4 = input[5]
-<<<<<<< HEAD
 
                 
                 filter(defaultFilterFile)
                 converting(defaultConvertFile)
                 fasta(defaultFilterFile,defaultConvertFile,defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4)
                 meme()                
-=======
-                defaultFastaFile5 = input[6]
-                defaultFastaFile6 = input[7]
-                defaultMEMEFile = input[8]
-                
-                filter(defaultFilterFile)
-                converting(defaultConvertFile)
-                fasta(defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4,defaultFastaFile5,defaultFastaFile6)
-                meme(defaultMEMEFile)                
->>>>>>> origin/master
                 print ("All files are created, without the sort algorithm")
                 
         if index == 2:
                 defaultFilterFile = input[0]
-<<<<<<< HEAD
                 defaultConvertFile = input[1]
                 defaultFastaFile1 = input[2]
                 defaultFastaFile2 = input[3]
                 defaultFastaFile3 = input[4]
                 defaultFastaFile4 = input[5]
-=======
-                defaultSortFile = input[1]
-                defaultConvertFile = input[2]
-                defaultFastaFile1 = input[3]
-                defaultFastaFile2 = input[4]
-                defaultFastaFile3 = input[5]
-                defaultFastaFile4 = input[6]
-                defaultFastaFile5 = input[7]
-                defaultFastaFile6 = input[8]
-                defaultMEMEFile = input[9]
->>>>>>> origin/master
                 
                 filter(defaultFilterFile)
                 sort(defaultSortFile)
                 converting(defaultConvertFile)
-<<<<<<< HEAD
                 fasta(defaultFilterFile,defaultConvertFile,defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4)
                 meme() 
-=======
-                fasta(defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4,defaultFastaFile5,defaultFastaFile6)
-                meme(defaultMEMEFile) 
->>>>>>> origin/master
                 print("All files are created, with the sort algorithm")
                 
         if index == 4:
                 file = input[0]
-<<<<<<< HEAD
                 defaultFilterFile = str(file)
-=======
-                defaultFilterFile = str (file)
->>>>>>> origin/master
                 filter(defaultFilterFile)
                 print ("File LP_DEG_glc_filtered.txt created")
                 
         if index == 5:
                 file = input[0]
-<<<<<<< HEAD
                 defaultSortFile = str(file)
-=======
-                defaultSortFile = str (file)
->>>>>>> origin/master
                 sort(defaultSortFile)
                 print ("File LP_DEG_glc_filtered.txt created")
                 
         if index == 6:
                 file = input[0]
-<<<<<<< HEAD
                 defaultConvertFile = str(file)
-=======
-                defaultConvertFile = str (file)
->>>>>>> origin/master
                 converting(defaultConvertFile)
                 print ("File LP_genes_NEW.txt created")
                 
@@ -160,30 +120,17 @@ def fasta(file1,file2,file3,file4,file5,file6):
         
 
 #MEME waarbij 4 keer meme wordt aangeroepen
-<<<<<<< HEAD
 def meme():
-=======
-def meme(defaultMEMEFile):
->>>>>>> origin/master
   for i in range(4):
                 z = str(i)
                 file = str("genes"+z+".fa")
                 index = i
-<<<<<<< HEAD
                 x = MEME.main(file,i)
 #MEME gebruik voor 1 file
 def MemeOneFile(defaultMEMEFile):
         i = 1
         file =  str(defaultMEMEFile)
         x = MEME.main(file,i)
-=======
-                x = MEME.main(file,idex)
-#MEME gebruik voor 1 file
-def MemeOneFile(defaultMEMEFile):
-        int(i) = 1
-        file =  str(defaultMEMEFile+str(i)+".fa")
-        x = MEME.main(file,idex)
->>>>>>> origin/master
         
 
 main()
