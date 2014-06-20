@@ -357,5 +357,4 @@ def main():
             lijst2.append(8)
             return lijst2
 
-main()
 
