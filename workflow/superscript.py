@@ -63,8 +63,8 @@ def getDataGUI(input):
                 defaultFastaFile4 = input[5]
                 
                 filter2(defaultFilterFile)
-                sort(defaultSortFile)
                 defaultFilterFile2 = "LP_DEG_glc_filtered.txt"
+                sort(defaultFilterFile2)
                 converting(defaultConvertFile)
                 fasta(defaultFilterFile2,defaultConvertFile,defaultFastaFile1,defaultFastaFile2,defaultFastaFile3,defaultFastaFile4)
                 meme() 
@@ -73,7 +73,7 @@ def getDataGUI(input):
         if index == 4:
                 file = input[0]
                 defaultFilterFile = str(file)
-                filter(defaultFilterFile)
+                filter2(defaultFilterFile)
                 print ("File LP_DEG_glc_filtered.txt created")
                 
         if index == 5:
