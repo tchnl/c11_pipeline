@@ -11,6 +11,10 @@ Version
 
 Installation
 --------------
+Requirements:
+- At least python 2.7.2 or higher with Tkinter module
+- MEME 4.10.0
+ 
 Motif finder can be installed in 2 ways:
 ####Clone from GitHub
 The Workflow folder needs to be placed on the Desktop.
@@ -19,6 +23,14 @@ git clone git@github.com:tchnl/c11_pipeline.git
 ```
 ####Manual repository download
 The Workflow folder can also be manually downloaded from the c11_pipeline at https://github.com/tchnl/c11_pipeline.
+
+
+####Execute superscript.py
+Go the Workflow folder in the terminal and execute superscript.py:
+```sh
+python superscript.py
+```
+
 
 Main Window
 ----
