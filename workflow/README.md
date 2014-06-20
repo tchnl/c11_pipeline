@@ -138,20 +138,21 @@ The files which will be used by this module are:
 
 ####MEME.py
 The MEME script is build to accept 4 FASTA files for input. These should be named:
-- genes0.fa
 - genes1.fa
 - genes2.fa
 - genes3.fa
+- genes4.fa
 
-The script changes location to the MEME bin directory (/sharing/students/meme/bin/) to call MEME. The parameters can be changed in the script. For parameter options, type 
+The parameters can be changed in the script. For parameter options, type 
 
     meme --help
     
 in the Terminal. The default parameters are as follows:
 
-    "/meme "+str(MEME_input)+" -dna -oc /home/thierry/c11_pipeline/output"+str(i)+"/ -nostatus -time 18000 -maxsize 60000 -mod zoops -nmotifs 3 -minw 35 -maxw 45 -revcomp"
-    
-str(MEME_input) are the 4 FASTA input files. The amount of input files can be changed. To modify the amount of FASTA files for MEME, change the "range" option in the script to the desired amount -1 (so if you have 6 scripts, give it a range of 5, as it automatically starts from "0").
+     subprocess.call("cd <$path where meme is installed/bin> ; ./meme <$path to desktop>/workflow/"+str(MEME_input)+" -dna -oc <$path to desktop>/output"+str(index)+"/ -nostatus -time 18000 -maxsize 60000 -mod zoops -nmotifs 3 -minw 45 -maxw 55 -revcomp", shell=True)
+
+The paths to the different locations have to be changed by the user in the correct paths, where <$path etc. > is given.
+
 
 
 License
